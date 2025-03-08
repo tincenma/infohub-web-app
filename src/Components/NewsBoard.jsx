@@ -10,6 +10,7 @@ const NewsBoard = ({category}) => {
     fetch(url)
     .then((response) => response.json())
     .then((data) => setArticles(data.articles))
+    .catch((error) => console.error('Error:', error));
   },[category])
 
   return (
