@@ -1,16 +1,16 @@
-import Navbar from './Components/Navbar.jsx'
-import NewsBoard from './Components/NewsBoard.jsx'
+import Navbar from './components/Navbar.jsx'
+import NewsBoard from './components/NewsBoard.jsx'
 import { useState } from 'react';
 
-const App = () => {
+export default function App() {
+  
   const [category, setCategory] = useState("general");
+  const [searchQuery, setSearchQuery] = useState("");
 
   return (
     <div>
-      <Navbar setCategory={setCategory} />
-      <NewsBoard category={category} />
+      <Navbar setCategory={setCategory} setSearchQuery={setSearchQuery} />
+      <NewsBoard category={category} searchQuery={searchQuery} />
     </div>
   )
 }
-
-export default App
