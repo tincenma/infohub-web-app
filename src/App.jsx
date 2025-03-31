@@ -1,7 +1,7 @@
-import Navbar from 'components/Navbar.jsx'
-import NewsBoard from '/pages/NewsBoard.jsx'
-import MainPage from '/pages/MainPage.jsx';
-import Weather from '/pages/Weather.jsx';
+import Navbar from './components/Navbar.jsx'
+import NewsBoard from './pages/NewsBoard.jsx'
+import MainPage from './pages/MainPage.jsx';
+import Weather from './pages/Weather.jsx';
 
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
