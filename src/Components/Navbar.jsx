@@ -2,7 +2,7 @@ import searchIcon from '../assets/search.svg';
 import { useLocation } from 'react-router-dom';
 
 
-export default function Navbar({ setCategory, setSearchQuery }) {
+export default function Navbar({ setCategory, setSearchQuery, setLocation }) {
   
   const location = useLocation();
 
@@ -41,7 +41,18 @@ export default function Navbar({ setCategory, setSearchQuery }) {
               <a className="nav-link" href="/weather">Weather</a>
             </li>
             {isWeatherPage && (
-              <a className='nav-link'>🌦 Weather mode — no search here</a>
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Location
+                </a>
+                <ul className="dropdown-menu">
+                  <li><div className="dropdown-item" onClick={() => setLocation("Astana")}>Astana</div></li>
+                  <li><div className="dropdown-item" onClick={() => setLocation("Almaty")}>Almaty</div></li>
+                  <li><div className="dropdown-item" onClick={() => setLocation("Shymkent")}>Shymkent</div></li>
+                  <li><div className="dropdown-item" onClick={() => setLocation("Aqtobe")}>Aqtobe</div></li>
+                  <li><div className="dropdown-item" onClick={() => setLocation("Khromtau")}>Khromtau</div></li>
+                </ul>
+              </li>
             )}
           </ul>
           {isNewsPage && (
