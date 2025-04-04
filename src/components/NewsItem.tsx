@@ -1,11 +1,5 @@
 import React from 'react';
-
-interface NewsItemProps {
-  title: string;
-  description?: string;
-  src: string;
-  url: string;
-}
+import { NewsItemProps } from '../types/NewsTypes';
 
 const NewsItem: React.FC<NewsItemProps> = ({ title, description, src, url }) => {
   return (

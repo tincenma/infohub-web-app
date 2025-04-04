@@ -1,18 +1,7 @@
 import React, { useState, useEffect } from "react";
 import NewsItem from "../components/NewsItem";
 import { NEWS_API_BASE_URL, NEWS_API_KEY } from "../config";
-
-interface NewsBoardProps {
-  category: string;
-  searchQuery: string;
-}
-
-interface Article {
-  title: string;
-  description: string;
-  urlToImage: string;
-  url: string;
-}
+import { NewsBoardProps, Article } from "../types/NewsTypes";
 
 const NewsBoard: React.FC<NewsBoardProps> = ({ category, searchQuery }) => {
   const [articles, setArticles] = useState<Article[]>([]);

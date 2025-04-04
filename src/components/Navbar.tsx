@@ -1,12 +1,7 @@
 import React from 'react';
 import searchIcon from '../assets/search.svg';
 import { useLocation } from 'react-router-dom';
-
-interface NavbarProps {
-  setCategory: React.Dispatch<React.SetStateAction<string>>;
-  setSearchQuery: React.Dispatch<React.SetStateAction<string>>;
-  setLocation: React.Dispatch<React.SetStateAction<string>>;
-}
+import { NavbarProps } from '../types/NewsTypes';
 
 const Navbar: React.FC<NavbarProps> = ({ setCategory, setSearchQuery, setLocation }) => {
   const routerLocation = useLocation();

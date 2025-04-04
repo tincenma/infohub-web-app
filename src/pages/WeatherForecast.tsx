@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { WEATHER_API_BASE_URL, WEATHER_API_KEY } from "../config";
-
-interface WeatherForecastProps {
-  location: string;
-}
-
-interface WeatherData {
-  temp_c: number;
-  // Add other weather properties here as needed
-}
+import { WeatherForecastProps, WeatherData } from "../types/WeatherTypes";
 
 const WeatherForecast: React.FC<WeatherForecastProps> = ({ location }) => {
   const [weather, setWeather] = useState<WeatherData | null>(null);
