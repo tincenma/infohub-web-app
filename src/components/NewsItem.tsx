@@ -4,7 +4,7 @@ import { NewsItemProps } from '../types/NewsTypes';
 const NewsItem: React.FC<NewsItemProps> = ({ title, description, src, url }) => {
   return (
     <div className="card bg-dark text-light mb-3 d-inline-block m-3 p-2" style={{ maxWidth: "345px" }}>
-      <img src={src} style={{ height: "200px" }} className="card-img-top" alt="News Image" />
+      <img src={src ? src : 'https://upload.wikimedia.org/wikipedia/commons/5/59/Empty.png'} style={{ height: "200px" }} className="card-img-top" alt="News Image" />
       <div className="card-body">
         <h5 className="card-title">{title.slice(0, 50)}</h5>
         <p className="card-text">

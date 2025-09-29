@@ -29,7 +29,7 @@ const NewsBoard: React.FC<NewsBoardProps> = ({ category, searchQuery }) => {
   });
 
   return (
-    <div>
+    <div className="px-1">
       <h2 className="text-center mt-3">
         Latest <span className="badge bg-danger">News</span>
       </h2>
